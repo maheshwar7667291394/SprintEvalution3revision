@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class Reportingmanager {
 	
 	@Id
-	@GeneratedValue
+	 @GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer managerid;
 	private String name;
 	private String type;
