@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 public class Employee {
 	
     @Id
-    @GeneratedValue
+     @GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer employeeId;
 	private String firstName;
 	private String lastName;
