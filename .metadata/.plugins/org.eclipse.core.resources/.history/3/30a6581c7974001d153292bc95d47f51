@@ -1,0 +1,10 @@
+package com.masai.model;
+
+public class Reportingmanager {
+	
+	private Integer managerid;
+	private String name;
+	private String type;
+	
+
+}

@@ -1,0 +1,11 @@
+package com.masai.exception;
+
+public class EmployeeException {
+	
+	public EmployeeException() {}
+	
+	public EmployeeException(String message) {
+	  super();
+	}
+
+}

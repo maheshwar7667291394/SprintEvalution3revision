@@ -1,0 +1,45 @@
+package com.masai.service;
+
+import java.util.Optional;
+
+import com.masai.exception.EmployeeException;
+import com.masai.model.Employee;
+import com.masai.model.Reportingmanager;
+import com.masai.repositry.EmployeeDao;
+
+public class EmployeeServiceimpl implements EmployeeService{
+	
+	public EmployeeDao edao;
+
+	@Override
+	public Employee RegesterEmployee(Employee emp) throws EmployeeException {
+		
+		Reportingmanager rmanager=emp.getManager();
+		rmanager.setEmp(emp);
+		
+		Optional<Employee> emps=edao.findById(emp.getEmployeeId());
+		if(emps.isPresent()) {
+			throw new EmployeeException("Employee already present by this id");
+		}
+		
+		if(emp.getType().equals("CTO")) {
+			emp.setEmployeeId(null);
+		}
+		if(emp.getType().equals("CEO")) {
+			emp.setEmployeeId(0);
+		}
+		
+		
+		 		
+	    return edao.save(emp);
+		 
+		
+		
+		
+	
+		
+	}
+	
+	
+
+}

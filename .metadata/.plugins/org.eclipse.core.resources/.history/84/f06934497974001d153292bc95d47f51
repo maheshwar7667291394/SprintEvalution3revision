@@ -1,0 +1,18 @@
+package com.masai.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Reportingmanager {
+	
+	private Integer managerid;
+	private String name;
+	private String type;
+	
+	private List<Employee> employees=new ArrayList<>();
+	
+	
+	
+	
+
+}

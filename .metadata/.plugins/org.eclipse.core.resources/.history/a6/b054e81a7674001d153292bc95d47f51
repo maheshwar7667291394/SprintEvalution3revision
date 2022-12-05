@@ -1,0 +1,15 @@
+package com.masai.model;
+
+
+
+public class Employee {
+	
+
+	private Integer employeeId;
+	private String firstName;
+	private String lastName;
+	
+	private String emil;
+	private String phoneNumebr;
+
+}
